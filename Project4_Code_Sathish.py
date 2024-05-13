@@ -7,7 +7,7 @@ import json
 class MainWindow(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.geometry("600x400")
+        self.geometry("600x900")
         self.title('Notebook')
         self.notebook = []
 
@@ -23,7 +23,7 @@ class MainWindow(tk.Tk):
         tk.Button(self.frame_main, text='Open Notebook', command=self.open_notebook).grid(padx=10, pady=10, row=2, column=1)
         tk.Button(self.frame_main, text='Save Notebook\nand Refresh', command=self.save_notebook).grid(padx=10, pady=10, row=3, column=1)
         tk.Button(self.frame_main, text='Quit', command=self.destroy).grid(padx=10, pady=10, row=4, column=1)
-
+        
     def new_note(self):
         NoteEdit(self, self.notebook, new=True)
 
@@ -50,6 +50,7 @@ class MainWindow(tk.Tk):
         file.write(json_out)
         file.close()
         self.show_notes()
+
 
 class NoteEdit(tk.Toplevel):
     def __init__(self, master, notebook, new=True, note_dict=None):
@@ -90,6 +91,7 @@ class NoteEdit(tk.Toplevel):
 
         tk.Button(self.frame_main, text='Submit', command=self.submit).grid(padx=10, pady=10, row=6, column=1, sticky='w')
         tk.Button(self.frame_main, text='Close', command=self.destroy).grid(padx=10, pady=10, row=6, column=0)
+        tk.Button(self.frame_main, text='Save as TXT', command=self.save_to_txt).grid(padx=10, pady=10, row=6, column=1, sticky='w')
 
     def submit(self):
         now = datetime.datetime.now()
@@ -110,6 +112,21 @@ class NoteEdit(tk.Toplevel):
 
         self.master.show_notes()
         self.destroy()
+
+    def save_to_txt(self):
+        txt_filepath = filedialog.asksaveasfile(defaultextension=".txt", filetypes=[("text file", ".txt")])
+        note_data = {
+            "title": self.note_title.get(),
+            "text": self.note_text.get("1.0", tk.END).strip(),
+            "code snippet": self.note_snippet.get("1.0", tk.END).strip(),
+            "link": self.note_link.get(),
+            "tags": self.note_tags.get(),
+        }
+        with open(txt_filepath, "w") as txt_file:
+            for key, value in note_data.items():
+                txt_file.write(f"{key}:\n{value}\n\n")
+
+
 
 class MakeNote(tk.Button):
     def __init__(self, master, note_dict, main_window):
