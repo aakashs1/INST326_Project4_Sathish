@@ -1,0 +1,82 @@
+[
+  {
+    "title": "loops",
+    "text": "Code meant to replace repetitive code with a simple few lines to repeat a certain function over again",
+    "code snippet": "",
+    "link": "",
+    "tags": "#code #codehelp",
+    "meta": "Edited on 2024-05-12 22:17:23"
+  },
+  {
+    "title": "CSV Files",
+    "text": "you can import and read CSV files in your code allowing you to add more functionality to your code. Being able to add your own CSV files into your code can help a lot in projects",
+    "code snippet": "",
+    "link": "",
+    "tags": "#code #codetips #python #csv #csvfiles",
+    "meta": "Edited on 2024-05-12 22:19:49"
+  },
+  {
+    "title": "printing",
+    "text": "using the print function you can print code to do many things. You can communicate with the user as well as display information while the code is running.",
+    "code snippet": "",
+    "link": "",
+    "tags": "#code #python #tips #print\n\n",
+    "meta": "Edited on 2024-05-12 22:18:21"
+  },
+  {
+    "title": "Buttons",
+    "text": "buttons can be coded into your program to allow the user to press the button to run a certain code that can do whatever you code it to do.",
+    "code snippet": "",
+    "link": "",
+    "tags": "#code #codetips #python #buttons #functionality",
+    "meta": "Edited on 2024-05-12 22:18:52"
+  },
+  {
+    "title": "Dictionary",
+    "text": "Using a dictionary is a good way to store a set of data in a group that has something in common. It allows for the data to be more organized and less time consuming to call data multiple times from different places for one thing.",
+    "code snippet": "",
+    "link": "",
+    "tags": "#code #python #tips #dictionary #storage\n\n",
+    "meta": "Edited on 2024-05-12 22:19:12"
+  },
+  {
+    "title": "Intro to Pandas",
+    "text": "Pandas is a Python library used for data manipulation and analysis. It offers three types of data structures: Series, DataFrame, and Index objects.",
+    "code snippet": "import pandas as pd\n\nmydataset = {\n  'cars': [\"Toyota\", \"Subaru\", \"Nissan\"],\n  'passings': [3, 7, 2]\n}\n\nmyvar = pd.DataFrame(mydataset)\n\nprint(myvar)",
+    "link": "links:https://www.w3schools.com/python/pandas/pandas_getting_started.asp",
+    "tags": "#pandas #intro #learning #basics #how-to",
+    "meta": "Edited on 2024-05-12 22:28:34"
+  },
+  {
+    "title": "Date and Time",
+    "text": "How to import date and time",
+    "code snippet": "import datetime\n\ncurrent_datetime = datetime.datetime.now()",
+    "link": "",
+    "tags": "#date #time #basics #intro",
+    "meta": "Edited on 2024-05-12 22:33:37"
+  },
+  {
+    "title": "Tkinter window",
+    "text": "All code that relates to the window object must take place inbetweeen the start and end of the commands shown below",
+    "code snippet": "window = Tk()\n...\n...\n...\nwindow.mainloop()",
+    "link": "",
+    "tags": "#Tkinter # basics # how-to #windows #mainloop",
+    "meta": "Edited on 2024-05-12 22:46:12"
+  },
+  {
+    "title": "Modules",
+    "text": "Save code as a .py file that has the functionalities you want it to have, then use that file to import what you want in yopur code.",
+    "code snippet": "import mymodule\n\nmymodule.greeting(\"Jonathan\")",
+    "link": "https://www.w3schools.com/python/python_modules.asp",
+    "tags": "#begginer #how-to #basics #modules #python",
+    "meta": "Edited on 2024-05-12 22:53:28"
+  },
+  {
+    "title": "__init__",
+    "text": "__init__ is used in python to initialize classes. it allows for the user to set up any initial attributes or setup tasks for later on.",
+    "code snippet": "class Car:\n    def __init__(self, brand, model, year):\n        self.brand = brand\n        self.model = model\n        self.year = year",
+    "link": "",
+    "tags": "#python #code #bigginer #how-to #basics",
+    "meta": "Edited on 2024-05-12 23:13:18"
+  }
+]
